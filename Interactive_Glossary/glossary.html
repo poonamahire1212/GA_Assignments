@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive-Glossary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="heading">Interactive Glossary</h1>
+
+    <div class="main-div" > 
+        <div id="operation-div">
+
+            <div>
+                <h3>Search By Term:</h3>
+                <input id="searchField" value= " " onkeypress = "searchGlossary()">
+            </div>
+            <div>
+                <h3>Filter by Class:</h3>
+                <label for="class">Choose a class:</label>
+
+                <select name="class" id="select-class" onchange = "filterByClass()">
+                    <option value="" selected= "selected">All</option>
+                    <option value="00" >00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                </select>
+            </div>
+            <div id="tags-div">
+                <h3>Filter by Tag:</h3>
+            </div>
+            <button id="searchButton" onClick = "executeAdvancedSearch()">Search</button>
+            <button id="clearButton" onClick = "clearResults()">Clear</button>
+
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="InteractiveGlossary.js"></script>
+</body>
+</html>
