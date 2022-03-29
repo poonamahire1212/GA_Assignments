@@ -4,14 +4,14 @@ window.onload = function(){
             let termA = a.term.toUpperCase(); // ignore upper and lowercase
             let termB = b.term.toUpperCase(); // ignore upper and lowercase
             if (termA < termB) {
-              return -1;
+              return -1;//sort termA before termB
             }
             if (termA > termB) {
-              return 1;
+              return 1;// sort termB before termA
             }
           
             // names must be equal
-            return 0;
+            return 0;//keep the orignal order of termA and termB
           });
     
     //glossary = sortGlossary(glossary);

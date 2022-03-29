@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  align-items: center;
+  background: #565fdf;
+  background-image: linear-gradient(
+    45deg,
+    hsl(236deg 68% 61%) 0%,
+    hsl(244deg 59% 61%) 5%,
+    hsl(252deg 52% 60%) 10%,
+    hsl(261deg 46% 58%) 14%,
+    hsl(270deg 40% 57%) 19%,
+    hsl(280deg 34% 56%) 24%,
+    hsl(293deg 28% 55%) 29%,
+    hsl(309deg 28% 55%) 33%,
+    hsl(322deg 32% 57%) 38%,
+    hsl(334deg 36% 59%) 43%,
+    hsl(344deg 40% 61%) 48%,
+    hsl(353deg 44% 63%) 52%,
+    hsl(1deg 48% 65%) 57%,
+    hsl(8deg 56% 64%) 62%,
+    hsl(13deg 63% 63%) 67%,
+    hsl(17deg 69% 63%) 71%,
+    hsl(20deg 75% 62%) 76%,
+    hsl(23deg 81% 61%) 81%,
+    hsl(26deg 86% 59%) 86%,
+    hsl(29deg 91% 58%) 90%,
+    hsl(31deg 96% 55%) 95%,
+    hsl(35deg 100% 50%) 100%
+  );
+  display: flex;
+  font-family: "Space Mono", monospace;
+  justify-content: center;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0.3px 0.5px 0.7px hsl(237deg 100% 0% / 0.14),
+    1.5px 2.9px 3.7px -0.4px hsl(237deg 100% 0% / 0.14),
+    2.7px 5.4px 6.8px -0.7px hsl(237deg 100% 0% / 0.14),
+    4.5px 8.9px 11.2px -1.1px hsl(237deg 100% 0% / 0.14),
+    7.1px 14.3px 18px -1.4px hsl(237deg 100% 0% / 0.14),
+    11.2px 22.3px 28.1px -1.8px hsl(237deg 100% 0% / 0.14),
+    17px 33.9px 42.7px -2.1px hsl(237deg 100% 0% / 0.14),
+    25px 50px 62.9px -2.5px hsl(237deg 100% 0% / 0.14);
+  max-height: 80vh;
+  overflow: auto;
+  padding: 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="submit"] {
+  border: 0.15rem solid black;
+  padding: 0.3rem 0.5rem;
+}
+
+input[type="submit"] {
+  background: #fff;
+  color: #000;
+  transition: all 0.2s ease-in-out;
+  will-change: background, color;
+}
+
+input[type="submit"]:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+
+
+
+

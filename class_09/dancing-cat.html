@@ -1,0 +1,75 @@
+<!-- When the cat reaches the right-hand side of the screen, make them move backwards instead. They should keep walking back and forth forever and ever. If you want to make it actually look like it is walking backwards - try setting the transform property to scaleX(-1)-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dancing Cats</title>
+    <style>
+      .dancing-cat {
+        position: absolute;
+    }
+     .dancing-cat2{
+        position: absolute;
+    }
+
+    </style>
+  </head>
+  <body>
+    <img
+      src="http://www.anniemation.com/clip_art/images/cat-walk.gif"
+      class="dancing-cat"
+    />
+    <img
+      src="cat-dance.gif"
+      class="dancing-cat2"
+    />
+
+    <script>
+            window.onload = function(){
+                setInterval(moveCat, 1200);
+            }
+            // Get the cat element
+             // Need px
+            let cat = document.querySelector(".dancing-cat");
+            cat.style.left = "0px";
+            let dancingCat = document.querySelector(".dancing-cat2");
+            dancingCat.style.left = "0px";
+            dancingCat.style.height = "300px";
+            dancingCat.style.width = "300px";
+            dancingCat.style.opacity = "0.0";
+
+            let direction = true;
+
+            function moveCat(){
+                
+                // Convert the current left position to a number from a string
+                // Add some new value to it
+                // Add the 'px' back in, and update the `cat.style.left`
+                if(direction){
+                    cat.style.left = parseInt(cat.style.left) + 5 + "px";
+                    dancingCat.style.left = parseInt(dancingCat.style.left) + 5 + "px";
+                    
+                }else{
+                    cat.style.left = parseInt(cat.style.left) - 5 + "px";
+                }
+
+                if(parseInt(cat.style.left) >= 1161){
+                    console.log('cat has reached right end');
+                    cat.style.transform = "scaleX(-1)";
+                    direction = false;
+                }
+                if(parseInt(cat.style.left)<= 0){
+                    console.log('cat has reached left end');
+                    cat.style.transform = "scaleX(1)";
+                    direction = true;
+                }
+                //console.log(cat.style.left);
+            }
+            //clearInterval(timer); 
+         // Combine with knowledge of `setInterval` or `setTimeout`
+    </script>
+  </body>
+</html>
