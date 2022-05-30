@@ -3,9 +3,11 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build && cp -R ./resources ./dist",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "parcel": "^2.6.0"
+    "parcel": "^2.6.0",
+    "parcel-plugin-static-files-copy": "^2.6.0"
   }
 }

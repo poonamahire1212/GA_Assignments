@@ -3,7 +3,7 @@ const tileLayerUrl = "https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=K
 const attribution = '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 L.tileLayer(tileLayerUrl, {attribution}).addTo(map);
 const satIcon = L.icon({
-    iconUrl: 'sat.png',
+    iconUrl: './resources/sat.png',
     iconSize: [60, 65],
     iconAnchor: [25, 20],
     popupAnchor: [-2, -20],
